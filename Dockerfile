@@ -1,13 +1,11 @@
-FROM nginx:alpine
+FROM ubuntu
 
 # Set working directory for document root
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html/Basic-CRUD-PHP-MySQL
 
 # Cleanup unneeded files, relative to working directory
 RUN rm -rf ./*
 
-COPY build/ /usr/share/nginx/html/
+COPY build/ /var/www/html/Basic-CRUD-PHP-MySQL
 
 EXPOSE 80
-
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
