@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: userthalib/Basic-CRUD-PHP-MySQL:latest
+    image: userthalib/uas:latest
     container_name: web
     restart: unless-stopped
     ports:
